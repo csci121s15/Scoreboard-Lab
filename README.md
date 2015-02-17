@@ -24,25 +24,38 @@ repository. We created a test for an empty scoreboard and a test for a
 scoreboard that contains only one score. Both of the tests currently pass, but
 we never wrote a test for a scoreboard that contains multiple scores.
 
+### Testing Two Scores
+
+Recall the Matra of testing:
+
+1. Create an object in a known state.
+2. Exercise the object (do something with the object).
+3. Verify (test) the current state of the object.
+
+To test the `Scoreboard` with two scores we should:
+
+1. Create a `Scoreboard` with a single score (a state we know is working).
+2. Exercise the `Scoreboard` by adding a second score
+3. Verify that the `Scoreboard` has the scores in the proper order and that there are 2 scores.
+
+But wait!  In step 2 we could add the second score *before* or *after* the first.  That means that we should have 2 tests.
+
+**Activity:** Add two tests, `testSecondScoreBeforeFirst` and `testSecondScoreAfterFirst` to the `Scoreboard` class, and then modify the `Scoreboard` class so that all four tests pass.
+
+
 ### Testing Multiple Scores
 
-Before you write the next test, answer the following:
+**Question 1:** In terms of the mantra, describe the tests you need to verify the correctness of a *non-full* `Scoreboard` with more than two entries.  Be specific about how many tests you need.
 
-**Question 1:** After adding a new score, the scoreboard should always be in
-descending sorted order. When writing tests we want to think of conditions
-that might expose coding errors. In what order should scores be added to the
-scoreboard so we can convince ourselves the code works correctly?
+**Activity:** Add the appropriate tests and ensure they pass.
 
-Now write a test that puts a `Scoreboard` object in a state where it contains
-multiple scores, and then verify that the scores are all present and in the
-proper order.
+### Testing a Full Scoreboard
 
-### Testing the Scoreboard Size
+A scoreboard should never contain more scores than the value specified in the constructor.
 
-A `Scoreboard` should never contain more than `maxScoreCount` scores. Write
-another test that adds a number of scores greater than `maxScoreCount` and
-tests that there are only `maxScoreCount` scores in the `Scoreboard` and that
-they are in the proper order.
+**Question 2:** In terms of the mantra, describe the tests you need to verify the corrections of a *full* `Scoreboard`.  Be speicific about how many tests you need.  *HINT*: Think carefully about the "bottom" of the `Scoreboard`.
+
+**Activity:** Add the appropriate tests and ensure they pass.
 
 ### Pushing Labs to GitHub
 
