@@ -10,12 +10,22 @@ public class Scoreboard {
   }
   
   public void addScore(int score) {
+    boolean breaker = false;
+    
     if (scores.size() == 0) 
       scores.add(score);
-    else if (score > scores.get(0)) {
-      scores.add(0, score);
-    } else
-      scores.add(score);
+    else {
+      for (int i = 0; i < scores.size(); i++) {
+        if (score > scores.get(i)) {
+          scores.add(i, score);
+          breaker = true;
+          break;
+        }
+      }
+        
+      if (breaker == false)
+        scores.add(score);
+    }
   }
   
   public boolean isHighScore(int score) {
