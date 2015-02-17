@@ -38,7 +38,11 @@ To test the `Scoreboard` with two scores we should:
 2. Exercise the `Scoreboard` by adding a second score
 3. Verify that the `Scoreboard` has the scores in the proper order and that there are 2 scores.
 
-But wait!  In step 2 we could add the second score *before* or *after* the first.  That means that we should have 2 tests.
+But wait!  In step 2 we could add the second score that is *greater than* or
+*less than* the first.  If the second score is greater than the first, then the
+second score added needs to take the first position in the scoreboard, and the
+first score added needs to be bumped down to second place. That means that we
+should have 2 tests.
 
 **Activity:** Add two tests, `testSecondScoreBeforeFirst` and `testSecondScoreAfterFirst` to the `Scoreboard` class, and then modify the `Scoreboard` class so that all four tests pass.
 
