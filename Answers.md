@@ -15,3 +15,11 @@ We also should throw in more than 3 scores to a new scoreboard to see if it work
 
 
 ####Question 2:
+Considering I already tested for more than 3 scores and the code worked correctly, the focus on these tests will be when an element needs to be deleted/popped off from the end of the ArrayList and the new high score needs to be added somewhere in the list. Thus, I need to test:
+
+* When the new score should be the lowest score
+* When the new score should be at the head or in the middle
+
+In the latter of the tests, all of the high scores lower than the new high score need to be moved one space down or popped off at the end. 
+
+For fun, I'm also going to add another test that adds an initial 10 values and then add another 10 values and hope it all works.
