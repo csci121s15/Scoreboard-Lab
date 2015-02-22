@@ -111,3 +111,10 @@ public class ScoreboardTest extends TestCase {
 
   
 }
+
+
+// .getScore(0)
+// .addScore(1, 42)
+// compare score and .getScore(0)
+// 
+//
