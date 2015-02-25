@@ -14,8 +14,9 @@ public class Scoreboard {
     
     for(int i = scores.size() - 1; i >= 0; i--) {
       if(score > scores.get(i)) {
+        int temp = score;
         scores.set(i+1, scores.get(i));
-        scores.set(i, score);
+        scores.set(i, temp);
       }
     }
   }

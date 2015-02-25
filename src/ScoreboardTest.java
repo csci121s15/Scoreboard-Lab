@@ -73,6 +73,16 @@ public class ScoreboardTest extends TestCase {
     sb.addScore(71);
     sb.addScore(38);
     
+    assertEquals(90, sb.getScore(0));
+    assertEquals(87, sb.getScore(1));
+    assertEquals(71, sb.getScore(2));
+    assertEquals(64, sb.getScore(3));
+    assertEquals(50, sb.getScore(4));
+    assertEquals(45, sb.getScore(5));
+    assertEquals(39, sb.getScore(6));
+    assertEquals(38, sb.getScore(7));
+    assertEquals(35, sb.getScore(8));
+    assertEquals(32, sb.getScore(9));
     assertEquals(25, sb.getScore(10));
   }
   
@@ -92,6 +102,16 @@ public class ScoreboardTest extends TestCase {
     sb.addScore(27);
     sb.addScore(8);
 
+    assertEquals(90, sb.getScore(0));
+    assertEquals(87, sb.getScore(1));
+    assertEquals(64, sb.getScore(2));
+    assertEquals(50, sb.getScore(3));
+    assertEquals(45, sb.getScore(4));
+    assertEquals(39, sb.getScore(5));
+    assertEquals(35, sb.getScore(6));
+    assertEquals(32, sb.getScore(7));
+    assertEquals(27, sb.getScore(8));
+    assertEquals(25, sb.getScore(9));
     assertEquals(14, sb.getScore(10));
   }
 }
