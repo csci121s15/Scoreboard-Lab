@@ -5,7 +5,7 @@ public class Scoreboard {
   private int maxCount;
   
   public Scoreboard(int maxScoreCount) {
-    scores = new ArrayList<Integer>(maxScoreCount);
+    scores = new ArrayList<>(maxScoreCount);
     maxCount = maxScoreCount;
   }
   
@@ -23,7 +23,7 @@ public class Scoreboard {
   
   public boolean isHighScore(int score) {
     
-      return true;
+    return true;
   }
   
   public int getScore(int position) {
