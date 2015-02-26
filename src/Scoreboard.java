@@ -29,7 +29,7 @@ public class Scoreboard {
   
   public boolean isHighScore(int score) {
     
-    if (scores.size() == 0 ||  scores.size() ){
+    if (scores.size() == 0 ||  scores.size() =  ){
     return true;
   }
     else {
