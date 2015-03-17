@@ -10,7 +10,20 @@ public class Scoreboard {
   }
   
   public void addScore(int score) {
-    scores.add(score);
+    int i = scores.size();
+    
+    if (scores.size() == 0) {
+      scores.add(score);
+      return;
+    }
+    else {
+      for (i = 0; i < scores.size(); i++) {
+        if (score > getScore(i)) {
+          scores.add(i, score);
+          break;
+        }
+      }
+    }
   }
   
   public boolean isHighScore(int score) {
