@@ -1,5 +1,5 @@
 #CSC 121: Computer Science II
-##Dice Rolling Lab Anwsers
+##Scoreboard Lab Anwsers
 ###Thomas X Belusko
 
 **Question 1:** We need to test that the scores added are placed in the correct positions based on the other scores in the Scoreboard. You will only need one test to test any number of scored beyond 2.
