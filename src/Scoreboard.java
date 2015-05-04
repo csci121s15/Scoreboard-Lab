@@ -10,7 +10,14 @@ public class Scoreboard {
   }
   
   public void addScore(int score) {
-    scores.add(score);
+    if (scores.size() == 0)
+      scores.add(score);
+    
+    else if(scores.get(0) > score)
+      scores.add(score);
+    
+    else
+      scores.add(0, score);
   }
   
   public boolean isHighScore(int score) {
